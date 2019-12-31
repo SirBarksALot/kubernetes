@@ -6,6 +6,6 @@ metadata:
   namespace: "django-test"
 spec:
   backend:
-    serviceName: "django-app-service"
-    servicePort: 80
+    serviceName: django-app-service
+    servicePort: 8765
 ...
