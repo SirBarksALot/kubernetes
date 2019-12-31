@@ -1,0 +1,22 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "django-app"
+  namespace: "django-test"
+  labels:
+    app: "django-app"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "django-app"
+  template:
+    metadata:
+      labels:
+        app: "django-app"
+    spec:
+      containers:
+      - name: "django-app-sha256"
+        image: "gcr.io/frsh-one/django_app@sha256:36decdf81572a17ad597fe71796434dcd9827d1806f3d564889cc9c8227bbec3"
+...
