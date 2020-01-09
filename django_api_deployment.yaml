@@ -1,0 +1,24 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "django-app-api"
+  namespace: "django-test"
+  labels:
+    app: "django-app-api"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "django-app-api"
+  template:
+    metadata:
+      labels:
+        app: "django-app-api"
+    spec:
+      containers:
+      - name: "django-app-api"
+        image: "gcr.io/frsh-one/django_app_api"
+        ports:
+          - containerPort: 5678
+...
