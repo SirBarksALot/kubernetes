@@ -9,6 +9,6 @@ spec:
     - port: 5678
       targetPort: 5678
   selector:
-    component: django-app-api
+    component: django-app
   type: ClusterIP
 ...
