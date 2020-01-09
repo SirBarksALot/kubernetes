@@ -1,0 +1,16 @@
+---
+apiVersion: "cert-manager.io/v1alpha2"
+kind: "Issuer"
+metadata:
+  name: "letsencrypt-production"
+spec:
+  acme:
+    email: youemail@insert.here
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: acme-account-key
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
+...
