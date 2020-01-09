@@ -5,16 +5,16 @@ metadata:
   name: "django-app-api"
   namespace: "django-test"
   labels:
-    app: "django-app-api"
+    app: "django-app"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: "django-app-api"
+      app: "django-app"
   template:
     metadata:
       labels:
-        app: "django-app-api"
+        app: "django-app"
     spec:
       containers:
       - name: "django-app-api"
