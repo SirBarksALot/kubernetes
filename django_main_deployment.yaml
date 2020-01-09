@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: "django-app-main"
-        image: "gcr.io/frsh-one/django_app@sha256:36decdf81572a17ad597fe71796434dcd9827d1806f3d564889cc9c8227bbec3"
+        image: "gcr.io/frsh-one/django_app_main"
         ports:
           - containerPort: 8765
 ...
